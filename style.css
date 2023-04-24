@@ -1,0 +1,298 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  /* SUN MODE*/
+
+  --sun-color-timer: #323238;
+  --sun-color-bg-sounds: #E1E1E6;
+  --sun-color-icon-sounds: #323238;
+  --sun-color-button: #323238;
+  --sun-color-volum-sounds: #323238;
+  --sun-bg: #FFFFFF;
+
+  /* MOON MODE */
+
+  --moon-color-timer: #FFFFFF;
+  --moon-color-button: #C4C4CC;
+  --moon-color-bg-sounds: #ffffff;
+  --moon-color-icon-sounds: #C4C4CC;
+  --moon-color-volum-sounds: #FFFFFF;
+  --moon-bg: #121214;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+
+  background: var(--sun-bg);
+}
+
+#theme{
+  display: none;
+}
+
+header{
+  position:absolute;
+  margin: 5rem 10rem;
+  right: 0;
+}
+
+.moon{
+  display: none;
+}
+
+main{
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.warraperContainer{
+  display: flex;
+  
+  gap: 19.2rem;
+  align-items: center;
+}
+
+.warraperTimer{
+  display: flex;
+  color: #323238;
+  
+  font-size: 12.7rem;
+  line-height: 14.8rem;
+}
+
+.warraperButton{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.warraperSounds{
+  display: flex;
+  gap: 3.2rem;  
+}
+
+.range{
+  position: relative;
+  bottom: 4.0rem;
+  left: 1.5rem;
+  width: 11.0rem;
+}
+
+.forest,
+.rain,
+.coffeeShop,
+.firePlace{
+  display: flex;
+  align-items:baseline;
+  justify-content: center;
+  padding-top: 3.0rem;
+  width: 13.8rem;
+  height: 15.2rem;
+  background: #E1E1E6;
+  border-radius: 25%;
+}
+
+/* -------------------------SUN------------------------------------- */
+
+
+
+
+
+.volumForest input,
+.volumRain input,
+.volumCoffeeShop input,
+.volumFirePlace input{
+  -webkit-appearance: none;
+  width: 11.0rem;
+  height: 0.5rem;
+  background: #000000;
+}
+
+.orb input{
+  -webkit-appearance: none;
+  width: 11.0rem;
+  height: 0.5rem;
+  background: #44bb26;
+}
+
+
+.volumForest input::-webkit-slider-thumb,
+.volumRain input::-webkit-slider-thumb,
+.volumCoffeeShop input::-webkit-slider-thumb,
+.volumFirePlace input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #b51414;
+  cursor: pointer;
+}
+
+.bar input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+
+
+/* -------------------------------------------------------------- */
+
+.play:hover,
+.pause:hover,
+.stop:hover,
+.plus:hover,
+.minus:hover,
+.forest:hover,
+.rain:hover,
+.coffeeShop:hover,
+.firePlace:hover,
+.sun:hover,
+.moon:hover {
+  transform: scale(1.1);
+  transition: 300ms 70ms;
+  cursor: pointer;  
+}
+
+.color path:nth-child(1){
+  fill: #ffffff;
+}
+
+.background{
+  background: #000000;
+}
+
+.hide {
+  display: none;
+}
+
+/* DARK MODE */
+
+.dark{
+  background: var(--moon-bg);
+}
+
+.dark .sun{
+  display: none;
+}
+
+.dark .moon{
+  display: block;
+}
+
+.dark .warraperTimer{
+  color: var(--moon-color-timer);
+}
+
+.dark .forest{
+  background: var(--moon-color-bg-sounds);
+}
+
+
+/* --------------------------MOON------------------------------------ */
+
+.dark .volumForest input,
+.dark .volumRain input,
+.dark .volumCoffeeShop input,
+.dark .volumFirePlace input{
+  -webkit-appearance: none;
+  width: 11.0rem;
+  height: 0.5rem;
+  background: #ffffff;
+}
+
+.dark .orb input{
+  -webkit-appearance: none;
+  width: 11.0rem;
+  height: 0.5rem;
+  background: #1ba6f7;
+}
+
+
+.dark .volumForest input::-webkit-slider-thumb,
+.dark .volumRain input::-webkit-slider-thumb,
+.dark .volumCoffeeShop input::-webkit-slider-thumb,
+.dark .volumFirePlace input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #b51414;
+  cursor: pointer;
+}
+
+.dark .bar input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #000000;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* -------------------------------------------------------------- */
+
+.dark .color svg path:nth-child(1){
+  fill: #030303;
+}
+
+.dark .volume input{
+  -webkit-appearance: none;
+  width: 11.0rem;
+  height: 0.5rem;
+  background: #C4C4CC;
+}
+
+.dark .forest,
+.dark .rain,
+.dark .coffeeShop,
+.dark .firePlace{
+  display: flex;
+  align-items:baseline;
+  justify-content: center;
+  padding-top: 3.0rem;
+  width: 13.8rem;
+  height: 15.2rem;
+  background: #29292E;
+  border-radius: 25%;
+}
+
+.dark .background{
+  background: #ffffff;
+}
+
+.dark .warraperSounds path:nth-child(1){
+  fill: #C4C4CC;
+}
+
+@media(max-width: 900px) {
+  
+  .warraperContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+  }
+
+  .TimerAndButtons{
+    margin-top: 8rem;
+  }
+  
+}
