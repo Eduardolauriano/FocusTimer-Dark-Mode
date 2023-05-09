@@ -241,14 +241,6 @@ main{
   cursor: pointer;
 }
 
-
-
-
-
-
-
-/* -------------------------------------------------------------- */
-
 .dark .color svg path:nth-child(1){
   fill: #030303;
 }
@@ -281,6 +273,9 @@ main{
 .dark .warraperSounds path:nth-child(1){
   fill: #C4C4CC;
 }
+
+
+/* -------------------------------------------------------------- */
 
 @media(max-width: 900px) {
   
